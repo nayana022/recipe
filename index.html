@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="auth">
+            <div id="signup">
+                <h2>Signup</h2>
+                <input type="text" id="signup-username" placeholder="Username">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signup()">Signup</button>
+            </div>
+            <div id="login">
+                <h2>Login</h2>
+                <input type="text" id="login-username" placeholder="Username">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+            </div>
+        </div>
+        <div id="dashboard" style="display:none;">
+            <h2>Recipe Dashboard</h2>
+            <button onclick="logout()">Logout</button>
+            <div>
+                <h3>Add Recipe</h3>
+                <input type="text" id="recipe-title" placeholder="Title">
+                <input type="text" id="recipe-category" placeholder="Category">
+                <textarea id="recipe-instructions" placeholder="Instructions"></textarea>
+                <button onclick="addRecipe()">Add Recipe</button>
+            </div>
+            <div>
+                <h3>Search Recipes</h3>
+                <input type="text" id="search-query" placeholder="Search">
+                <button onclick="searchRecipes()">Search</button>
+            </div>
+            <div id="recipes"></div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
